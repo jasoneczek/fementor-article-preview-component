@@ -22,6 +22,7 @@
   --clr-med-blue: hsl(214, 17%, 51%);
   --clr-light-blue: hsl(212, 23%, 69%);
   --clr-light-gray: hsl(210, 46%, 95%);
+  --clr-white: hsl(0, 0%, 100%);
 
   /* typography */
   --ff-ss: 'Manrope', sans-serif;
@@ -32,6 +33,66 @@
   --fs-3: 1.25rem;
   --fs-f: clamp(var(--fs-2), 0.5vw + 0.8125rem, var(--fs-3));
 }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-height: 100svh;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-ss);
+  font-size: var(--fs-1);
+  font-weight: var(--fw-m);
+  background-color: var(--clr-light-gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 
 
 
