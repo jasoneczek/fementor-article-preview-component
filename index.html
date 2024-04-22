@@ -4,44 +4,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
   <title>Frontend Mentor | Article preview component</title>
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
 
-  Shift the overall look and feel by adding these wonderful
-  touches to furniture in your home
+  <main>
 
-  Ever been in a room and felt like something was missing? Perhaps
-  it felt slightly bare and uninviting. I’ve got some simple tips
-  to help you make any room feel complete.
+    <div class="card">
+      <img src="./assets/images/drawers.jpg"
+        alt="framed pictures and a tan vase with plants sit atop a rustic, wooden, green cabinet with drawers against a white brick wall"
+        class="card__image">
+      <div class="card__body">
+        <h2 class="card__title">
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+        </h2>
+        <p class="card__lead">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
+      </div>
+      <footer class="card__footer">
+        <figure>
+          <img src="./assets/images/avatar-michelle.jpg" alt="Michelle Appleton" class="card__author-img">
+          <figcaption>
+            <h3 class="card__author-name">Michelle Appleton</h3>
+            <time datetime="2020-6-28" class="card__article-date">28 Jun 2020</time>
+          </figcaption>
+        </figure>
+        <button id="shareBtn" class="share-btn" aria-label="open share article menu" aria-expanded="false"
+          aria-controls="shareMenu">
+          <img class="share-icon" focusable="false" aria-hidden="true" src="./assets/images/icon-share.svg" alt="">
+        </button>
+        <div class="share-menu" id="shareMenu" aria-hidden="true">
+          <h4 id="shareMenuTitle">Share</h4>
+          <nav aria-labelledby="shareMenuTitle">
+            <ul>
+              <li>
+                <a href="#" aria-label="share article on facebook">
+                  <img src="./assets/images/icon-facebook.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="share article on twitter">
+                  <img src="./assets/images/icon-twitter.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="share article on pinterest">
+                  <img src="./assets/images/icon-pinterest.svg" alt="">
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button aria-label="close share menu">
+            <img src="./assets/images/icon-share.svg" alt="" id="closeBtn" class="close-btn">
+          </button>
+        </div>
+      </footer>
+    </div>
 
-  Michelle Appleton
-  28 Jun 2020
+  </main>
 
-  Share
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/jasoneczek" target="_blank">@jasoneczek</a>.
+    </div>
+  </footer>
+  <script>article </script>
 </body>
 
 </html>
