@@ -18,10 +18,12 @@
         alt="framed pictures and a tan vase with plants sit atop a rustic, wooden, green cabinet with drawers against a white brick wall"
         class="card__image">
       <div class="card__body">
-        <h2 class="card__title">
-          Shift the overall look and feel by adding these wonderful
-          touches to furniture in your home
-        </h2>
+        <a href="#">
+          <h2 class="card__title">
+            Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home
+          </h2>
+        </a>
         <p class="card__lead">
           Ever been in a room and felt like something was missing? Perhaps
           it felt slightly bare and uninviting. I’ve got some simple tips
@@ -33,16 +35,16 @@
           <img src="./assets/images/avatar-michelle.jpg" alt="Michelle Appleton" class="card__author-img">
           <figcaption>
             <h3 class="card__author-name">Michelle Appleton</h3>
-            <time datetime="2020-6-28" class="card__article-date">28 Jun 2020</time>
+            <time datetime="2020-06-28" class="card__article-date">28 Jun 2020</time>
           </figcaption>
         </figure>
-        <button id="shareBtn" class="share-btn" aria-label="open share article menu" aria-expanded="false"
-          aria-controls="shareMenu">
+        <button id="shareBtn" class="share-btn" aria-label="share article" aria-expanded="false" aria-controls="dialog"
+          aria-haspopup="true">
           <img class="share-icon" focusable="false" aria-hidden="true" src="./assets/images/icon-share.svg" alt="">
         </button>
-        <div class="share-menu" id="shareMenu" aria-hidden="true">
-          <h4 id="shareMenuTitle">Share</h4>
-          <nav aria-labelledby="shareMenuTitle">
+        <div role="dialog" id="dialog" class="dialog" aria-modal="true">
+          <h4 id="dialogTitle">Share</h4>
+          <nav aria-labelledby="dialogTitle">
             <ul>
               <li>
                 <a href="#" aria-label="share article on facebook">
@@ -61,8 +63,8 @@
               </li>
             </ul>
           </nav>
-          <button aria-label="close share menu">
-            <img src="./assets/images/icon-share.svg" alt="" id="closeBtn" class="close-btn">
+          <button id="closeBtn" class="close-btn" aria-label="close menu">
+            <img src="./assets/images/icon-share.svg" alt="">
           </button>
         </div>
       </footer>
