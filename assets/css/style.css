@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('Manrope-Medium.woff2') format('woff2'),
+    url('Manrope-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('Manrope-Bold.woff2') format('woff2'),
+    url('Manrope-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* colors */
+  --clr-dark-blue: hsl(217, 19%, 35%);
+  --clr-med-blue: hsl(214, 17%, 51%);
+  --clr-light-blue: hsl(212, 23%, 69%);
+  --clr-light-gray: hsl(210, 46%, 95%);
+
+  /* typography */
+  --ff-ss: 'Manrope', sans-serif;
+  --fw-m: 500;
+  --fw-b: 700;
+  --fs-1: 0.8125rem;
+  --fs-2: 1rem;
+  --fs-3: 1.25rem;
+  --fs-f: clamp(var(--fs-2), 0.5vw + 0.8125rem, var(--fs-3));
+}
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
