@@ -66,6 +66,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--clr-light-gray);
+  font-family: var(--ff-ss);
 }
 
 h1,
@@ -75,13 +76,6 @@ h4,
 button {
   line-height: 1.1;
 }
-
-/* h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-} */
 
 img,
 picture {
@@ -100,15 +94,17 @@ button {
   background-color: var(--clr-white);
   border-radius: 0.625rem;
   overflow: hidden;
-  font-family: var(--ff-ss);
   font-size: var(--fs-1);
   font-weight: var(--fw-m);
-  color: var(--clr-light-blue);
+  color: var(--clr-med-blue);
+  margin-bottom: 2rem;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* .card__image {
+.card__image {
   object-fit: cover;
-} */
+  aspect-ratio: 327 / 200;
+}
 
 .card__body {
   padding: 2.5rem 2rem 1.5rem;
@@ -123,6 +119,10 @@ button {
   font-weight: var(--fw-b);
   color: var(--clr-dark-blue);
   line-height: 1.4;
+}
+
+.card__lead {
+  max-width: 31ch;
 }
 
 .card__footer {
@@ -168,7 +168,7 @@ button {
 }
 
 .share-btn[aria-expanded="true"] .share-icon path {
-  fill: none;
+  fill: var(--clr-white);
 }
 
 .share-options[aria-expanded="true"] {
@@ -185,7 +185,7 @@ button {
   bottom: 0;
   left: 0;
   z-index: 1;
-  padding: 0.75rem 2rem 1.5rem;
+  padding: 0 2rem;
 }
 
 .share-options h3 {
@@ -193,6 +193,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-weight: var(--fw-m);
+  color: var(--clr-light-blue);
 }
 
 .share-options .flex {
@@ -221,10 +222,18 @@ button {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
+  color: var(--clr-dark-blue);
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  text-decoration: underline;
+  color: var(--clr-med-blue);
+  transition: 0.2s ease-in-out;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  color: var(--clr-light-blue);
 }
