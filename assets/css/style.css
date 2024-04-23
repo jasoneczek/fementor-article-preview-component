@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Manrope';
-  src: url('Manrope-Medium.woff2') format('woff2'),
-    url('Manrope-Medium.woff') format('woff');
+  src: url('../fonts/Manrope-Medium.woff2') format('woff2'),
+    url('../fonts/Manrope-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'Manrope';
-  src: url('Manrope-Bold.woff2') format('woff2'),
-    url('Manrope-Bold.woff') format('woff');
+  src: url('../fonts/Manrope-Bold.woff2') format('woff2'),
+    url('../fonts/Manrope-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -54,6 +54,10 @@ ol[role='list'] {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   min-height: 100svh;
   line-height: 1.5;
@@ -61,9 +65,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: var(--ff-ss);
-  font-size: var(--fs-1);
-  font-weight: var(--fw-m);
   background-color: var(--clr-light-gray);
 }
 
@@ -75,12 +76,12 @@ button {
   line-height: 1.1;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4 {
   text-wrap: balance;
-}
+} */
 
 img,
 picture {
@@ -93,9 +94,131 @@ button {
   font-size: inherit;
 }
 
+.card {
+  width: min(100% - 3rem, 45.625rem);
+  margin: 0 auto;
+  background-color: var(--clr-white);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  font-family: var(--ff-ss);
+  font-size: var(--fs-1);
+  font-weight: var(--fw-m);
+  color: var(--clr-light-blue);
+}
 
+/* .card__image {
+  object-fit: cover;
+} */
 
+.card__body {
+  padding: 2.5rem 2rem 1.5rem;
+}
 
+.card__title {
+  margin-bottom: 1.125rem;
+}
+
+.card__title a {
+  font-size: var(--fs-f);
+  font-weight: var(--fw-b);
+  color: var(--clr-dark-blue);
+  line-height: 1.4;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0.75rem 2rem 1.5rem;
+}
+
+.card__footer figure {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__author-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.card__author-name {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-m);
+  color: var(--clr-dark-blue);
+}
+
+.share-btn {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--clr-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.share-btn[aria-expanded="true"] {
+  background-color: var(--clr-med-blue);
+}
+
+.share-btn[aria-expanded="true"] .share-icon path {
+  fill: none;
+}
+
+.share-options[aria-expanded="true"] {
+  background-color: var(--clr-med-blue);
+}
+
+.share-options {
+  background-color: var(--clr-dark-blue);
+  max-width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0.75rem 2rem 1.5rem;
+}
+
+.share-options h3 {
+  margin-right: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: var(--fw-m);
+}
+
+.share-options .flex {
+  display: flex;
+  align-content: center;
+}
+
+.share-options ul {
+  display: flex;
+  align-content: center;
+  gap: 1rem;
+}
+
+.share-options img {
+  height: 100%;
+  width: auto;
+}
+
+.share-options[aria-hidden="true"] {
+  display: none;
+}
+
+.share-options[aria-hidden="false"] {
+  display: flex;
+  align-items: center;
+}
 
 .attribution {
   font-size: 11px;
