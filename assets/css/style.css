@@ -89,6 +89,7 @@ button {
 }
 
 .card {
+  display: grid;
   width: min(100% - 3rem, 45.625rem);
   margin: 0 auto;
   background-color: var(--clr-white);
@@ -106,8 +107,12 @@ button {
   aspect-ratio: 327 / 200;
 }
 
-.card__body {
+.card__content {
   padding: 2.5rem 2rem 1.5rem;
+}
+
+.card__body {
+  margin-bottom: 2.25rem;
 }
 
 .card__title {
@@ -121,16 +126,11 @@ button {
   line-height: 1.4;
 }
 
-.card__lead {
-  max-width: 31ch;
-}
-
 .card__footer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  padding: 0.75rem 2rem 1.5rem;
 }
 
 .card__footer figure {
@@ -177,13 +177,13 @@ button {
 
 .share-options {
   background-color: var(--clr-dark-blue);
-  max-width: 100%;
+  /* max-width: 100%; */
   margin: 0 auto;
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  right: -2.5rem;
+  bottom: -1.5rem;
+  left: -2.5rem;
   z-index: 1;
   padding: 0 2rem;
 }
@@ -236,4 +236,23 @@ button {
 .attribution a:hover,
 .attribution a:focus {
   color: var(--clr-light-blue);
+}
+
+@media (min-width: 36rem) {
+  .card {
+    grid-template-columns: 17.8125rem 1fr;
+
+  }
+
+  .card__image {
+    /* aspect-ratio: 285 / 280; */
+    object-fit: cover;
+    min-height: 100%;
+    grid-column: 1;
+  }
+
+  .card__content {
+    grid-column: 2;
+    padding: 2.25rem;
+  }
 }
