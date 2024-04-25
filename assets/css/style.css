@@ -102,6 +102,10 @@ button {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
+.card__img-container {
+  overflow: hidden;
+}
+
 .card__image {
   object-fit: cover;
   aspect-ratio: 327 / 200;
@@ -112,7 +116,7 @@ button {
 }
 
 .card__body {
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .card__title {
@@ -131,6 +135,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .card__footer figure {
@@ -161,6 +166,7 @@ button {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  cursor: pointer;
 }
 
 .share-btn[aria-expanded="true"] {
@@ -177,7 +183,6 @@ button {
 
 .share-options {
   background-color: var(--clr-dark-blue);
-  /* max-width: 100%; */
   margin: 0 auto;
   position: absolute;
   top: 0;
@@ -185,7 +190,7 @@ button {
   bottom: -1.5rem;
   left: -2.5rem;
   z-index: 1;
-  padding: 0 2rem;
+  padding-left: 2.5rem;
 }
 
 .share-options h3 {
@@ -199,6 +204,7 @@ button {
 .share-options .flex {
   display: flex;
   align-content: center;
+  justify-content: space-between;
 }
 
 .share-options ul {
@@ -208,8 +214,8 @@ button {
 }
 
 .share-options img {
-  height: 100%;
-  width: auto;
+  min-height: 100%;
+  max-width: auto;
 }
 
 .share-options[aria-hidden="true"] {
@@ -240,19 +246,51 @@ button {
 
 @media (min-width: 36rem) {
   .card {
+    overflow: visible;
     grid-template-columns: 17.8125rem 1fr;
-
   }
 
   .card__image {
-    /* aspect-ratio: 285 / 280; */
-    object-fit: cover;
     min-height: 100%;
     grid-column: 1;
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
   }
 
   .card__content {
     grid-column: 2;
     padding: 2.25rem;
+  }
+
+  .card__footer {
+    padding-top: 0;
+  }
+
+  .share-options {
+    width: 15.5rem;
+    top: -200%;
+    right: -2.5rem;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(19%);
+    padding: 1.125rem 2.25rem;
+    border-radius: 0.625rem;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.75rem 0.75rem 0 0.75rem;
+    border-color: var(--clr-dark-blue) transparent transparent transparent;
+  }
+
+  .share-options li {
+    height: 1.25rem;
+    width: 1.25rem;
   }
 }
