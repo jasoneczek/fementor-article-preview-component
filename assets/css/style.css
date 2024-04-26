@@ -177,10 +177,6 @@ button {
   fill: var(--clr-white);
 }
 
-.share-options[aria-expanded="true"] {
-  background-color: var(--clr-med-blue);
-}
-
 .share-options {
   background-color: var(--clr-dark-blue);
   margin: 0 auto;
@@ -225,6 +221,11 @@ button {
 .share-options[aria-hidden="false"] {
   display: flex;
   align-items: center;
+}
+
+.share-options[aria-hidden="false"] a img:focus,
+.share-options[aria-hidden="false"] a img:hover {
+  outline: 2px solid var(--clr-med-blue);
 }
 
 .attribution {
